@@ -1,11 +1,11 @@
+# --- Created by Slick DDL
+# To stop Slick DDL generation, remove this comment and start using Evolutions
+
 # --- !Ups
 
-CREATE TABLE revelation (
-  id int(10) NOT NULL AUTO_INCREMENT,
-  type SMALLINT NOT NULL,
-  word varchar(64) NOT NULL,
-  PRIMARY KEY (id)
-)  ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+create table `revelation` (`id` INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,`rokuyou` SMALLINT NOT NULL,`word` VARCHAR(254) NOT NULL);
 
 # --- !Downs
-DROP TABLE revelation
+
+drop table `revelation`;
+
