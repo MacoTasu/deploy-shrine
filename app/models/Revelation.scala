@@ -1,6 +1,7 @@
 package models
 
 import play.api.db.slick.Config.driver.simple._
+import play.api.libs.json._
 
 case class Revelation(id: Option[Int], rokuyou: Short, word: String)
 
@@ -13,6 +14,9 @@ class Revelations(tag: Tag) extends Table[Revelation](tag,"revelation") {
 }
 
 object Revelations extends DAO {
+  implicit val RevelationReads  = Json.reads[Revelation]
+  implicit val RevelationWrites = Json.writes[Revelation]
+
   def findById(id: Int)(implicit s: Session): Option[Revelation] = {
     Revelations.filter(_.id === id).firstOption
   }
