@@ -34,7 +34,7 @@ object Application extends Controller {
       // http://kayosystem.blogspot.jp/2010/07/web.html
       // こちらのAPIを利用しています
       val date = "%tY/%<tm/%<td" format new Date
-      val future: Future[WS.Response] = {
+      val future: Future[play.api.libs.ws.Response] = {
         WS.url("http://jqreki.appspot.com/qreki/" + date).get()
       }
       val response     = Await.result(future, Duration.Inf).body
