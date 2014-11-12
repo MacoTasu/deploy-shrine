@@ -15,5 +15,5 @@ libraryDependencies ++= Seq(
   "org.slf4j" % "slf4j-nop" % "1.6.4",
   "com.typesafe.play" %% "play-slick" % "0.8.0",
   "mysql" % "mysql-connector-java" % "5.1.26",
-   "org.postgresql" % "postgresql" % "9.2-1002-jdbc4"
+   "org.postgresql" % "postgresql" % "9.2-1004-jdbc4"
 )
