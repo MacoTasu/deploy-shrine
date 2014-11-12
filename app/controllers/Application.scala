@@ -20,12 +20,12 @@ object Application extends Controller {
   import Revelations.RevelationWrites
 
   def setup = DBAction { implicit request =>
-    Revelations.insert(Revelation(Option.apply(1),1,"大安","今日は大安です。思い切ってdeployしちゃいましょう。"))
-    Revelations.insert(Revelation(Option.apply(2),2,"赤口","今日は赤口です。実は仏滅よりもやばいです。deployしたらあかん..."))
-    Revelations.insert(Revelation(Option.apply(3),3,"先勝","今日は先勝です。deployは午前中に済ませましょう。"))
-    Revelations.insert(Revelation(Option.apply(4),4,"友引","今日は友引です。昼のdeployはさけましょう。するなら朝晩が吉です。"))
-    Revelations.insert(Revelation(Option.apply(5),5,"先負","今日は先負です。deployは午後からが吉でしょう。"))
-    Revelations.insert(Revelation(Option.apply(6),6,"仏滅","今日は仏滅です。仏滅deployとか事故のもとですよ。"))
+    Revelations.insert(Revelation(Option.apply(1),1,Option.apply("大安"),"今日は大安です。思い切ってdeployしちゃいましょう。"))
+    Revelations.insert(Revelation(Option.apply(2),2,Option.apply("赤口"),"今日は赤口です。実は仏滅よりもやばいです。deployしたらあかん..."))
+    Revelations.insert(Revelation(Option.apply(3),3,Option.apply("先勝"),"今日は先勝です。deployは午前中に済ませましょう。"))
+    Revelations.insert(Revelation(Option.apply(4),4,Option.apply("友引"),"今日は友引です。昼のdeployはさけましょう。するなら朝晩が吉です。"))
+    Revelations.insert(Revelation(Option.apply(5),5,Option.apply("先負"),"今日は先負です。deployは午後からが吉でしょう。"))
+    Revelations.insert(Revelation(Option.apply(6),6,Option.apply("仏滅"),"今日は仏滅です。仏滅deployとか事故のもとですよ。"))
 
     Ok("setup finished")
   }
