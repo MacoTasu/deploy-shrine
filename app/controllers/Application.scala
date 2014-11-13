@@ -41,6 +41,6 @@ object Application extends Controller {
       val json         = Json.parse(response)
       val rokuyou_text = (json \ "rokuyo").as[String]
       val number       = Revelations.rokuyouType(rokuyou_text);
-      Ok(views.html.json(Json.stringify(Json.toJson(Revelations.findById(number)))))
+      Ok(Json.toJson(Revelations.findById(number)))
   }
 }
