@@ -40,8 +40,9 @@ object Application extends Controller {
       val response     = Await.result(future, Duration.Inf).body
       val json         = Json.parse(response)
       val rokuyou_text = (json \ "rokuyo").as[String]
+      print(rokuyou_text)
       val number       = Revelations.rokuyouType(rokuyou_text);
-
+      print(number)
       Ok(Json.toJson(Revelations.findById(number)))
   }
 }
